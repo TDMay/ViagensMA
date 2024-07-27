@@ -1,14 +1,100 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+    --azul: #00245D;
+    --white: #fff
 }
 
 body{
-    height: 100vh;
+    color: var(--white);
+    background: var(--azul);
 }
 
-.card{
-    width: 30%;
-    height: 20%;
-    background-color: red;
+/*
+#header {
+    box-sizing: border-box;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--azul);
+}
+*/
+
+#navigation{
+    background: var(--azul);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 2px;
+    transition: all 0.5s;
+    width: 100%;
+    height: 110px;
+}
+
+.logo img{
+    width: 180px;
+    height: 180px;
+}
+
+.img_fundo{
+    width: 1560px;
+    height: 650px;
+}
+
+.pag_principal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titulo1{
+    margin-right: 15px;
+    color: var(--white);
+    -webkit-text-stroke: 3px #000; 
+    font-family: "Lilita One", sans-serif;
+    font-size: 50px;
+    font-weight: 200px;
+    font-style: oblique;
+    background-clip: text;       
+}
+
+.titulo2{
+    margin-right: 15px;
+    color: var(--white);
+    -webkit-text-stroke: 3px #000; 
+    font-family: "Lilita One", sans-serif;
+    font-size: 50px;
+    font-weight: 200px; ;
+    font-style: oblique;
+    background-clip: text; 
+      
+}
+.titulo3{
+    margin-right: 15px;
+    -webkit-text-stroke: 3px #000; 
+    color: #FFD200;
+    font-family: "Lilita One", sans-serif;
+    font-size: 60px;
+    font-weight: 200px;
+    font-style: oblique;
+    background-clip: text; 
+    font-style: italic;
+}
+
+#nav_list{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+.nav_item a{
+    color: var(--white);
 }
