@@ -88,3 +88,69 @@
 .esconder {
     display: none;
 }
+
+
+
+/* estilização destinos */
+
+#logo{
+    width: 210px;
+    height: 210px;
+}
+
+.nav{
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #d9e8ff;
+}
+
+form{
+    margin-right: 80px;
+    margin: 10px;
+    padding : 10px;
+    border: 1px solid var(--azul);
+    border-radius: 20px;
+    display: flex;
+    background: #d9e8ff;
+}
+
+form input#pesquisa {
+    padding: 5px;
+    border: none;
+    outline: none;
+    background: #d9e8ff;
+    width: 300px;
+}
+
+form button{
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    background: #647ea9;
+    color: var(--white);
+}
+
+
+.lista{
+    margin-top: 10px;
+    display: flex;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius:5px ;
+    margin: 5px;
+}
+
+.item{
+    text-align: center;
+    padding: 10px;
+    width: 300px;
+    border: 2px solid #00245D;
+    margin: 8px;
+
+}
+
+.item img {
+    width: 100%;
+}
