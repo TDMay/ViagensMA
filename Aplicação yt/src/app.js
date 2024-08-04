@@ -19,12 +19,16 @@ async function pegarPosts() {
 
         const div = document.createElement("div")
         const nome = document.createElement("h2")
+        const descricao = document.createElement("p")
+        const cidade = document.createElement("p")
         const imagemUm = document.createElement("img")
         const imagemDois = document.createElement("img")
         const imagemTres = document.createElement("img")
         const imagemQuatro = document.createElement("img")
 
         nome.innerText = local.nome;
+        descricao.innerText = local.descricao;
+        cidade.innerText = "Cidade: " + local.endereco;
 
         //Adicionando Imagens
         if (local.imagens && local.imagens.length > 0) {
@@ -47,6 +51,8 @@ async function pegarPosts() {
 
 
         div.appendChild(nome);
+        div.appendChild(descricao);
+        div.appendChild(cidade);
         div.appendChild(imagemUm);
         div.appendChild(imagemDois);
         div.appendChild(imagemTres);
