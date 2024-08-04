@@ -1,46 +1,31 @@
-const url = ; // colocar o link da API!!!
+const url = "https://api-desafio5-tdmay.vercel.app/atracao"
 
-const elementoCarregar = document.querySelector("#carregar");
-const 
-
+const elementoCarregar = document.querySelector("#carregar")
+const principal = document.querySelector("#principal")
 
 // Pegar os posts
 async function pegarPosts(){
-
     const response = await fetch(url);
-
-    const data = await response.json();
-
 
     console.log(response);
 
+    const data = await response.json();
+
     console.log(data);
 
-    elementoCarregar.classList.add("hide");
+    elementoCarregar.classList.add("esconder");
 
-    data.map( (resposta) =>{
-
+    data.map((local) => {
+        
         const div = document.createElement("div")
-        const title = document.createElement("h2")
-        const body = document.createElement("h2")
-        const link = document.createElement("h2")
-        const imagem = document.createElement("img")
+        const nome = document.createElement("h2")
 
-        title.innerText = resposta.title
-        body.innerText = resposta.body
+        nome.innerText = local.nome;
 
-        link.innerText = "Ver local"
-        link.setAttribute("href", `/post.html?id=${resposta.id}`) //buscar no html o ID da local
-
-        imagem.setAttribute("alt", `Imagem de ${resposta}`)
-        imagem.setAttribute("src",`/post.html?id=${resposta.imagem}`) //buscar no html a imagem do local
-
-        div.appendChild(title)
-        div.appendChild(body)
-        div.appendChild(link)
-        div.appendChild(imagem)
+        div.appendChild(nome);
 
         principal.appendChild(div);
-    });
+    })
 }
 
+pegarPosts()
