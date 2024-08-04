@@ -154,3 +154,83 @@ form button{
 .item img {
     width: 100%;
 }
+
+/*===CSS da CONEXAO===*/
+
+.conteudo{
+    /*Conteúdo é o body, onde está tudo*/
+    background-color: blue;
+}
+
+.tituloGeral{
+    /*É o local onde está escrito "Informações". está dentro de .conteudo*/
+    color: purple;
+}
+
+#principal{
+    /* Principal é a div onde estão todos os locais (principal está dentro de .conteúdo). O flex daqui separa cada local*/
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.local{
+    /*Div que trata de cada local individualmente*/
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nome{
+    /*Área H2 que trata de cada nome (os títulos do local) */
+    color: yellow;
+}
+
+.descricao{
+    /*Área p que trata de cada descrição*/
+    color: green;
+}
+
+.cidade{
+    /*Área p que trata da cidade de cada local*/
+    color: pink;
+}
+
+.localImagens{
+    /*Div onde estão contidas as imagens (duas pra cada local)*/
+    display: flex;
+    gap: 20px;
+}
+
+.imagemUnica{
+    /*img de cada imagem contida em .imagens*/
+    width: 50%;
+
+}
+
+.mapa{
+    /*para alterar o tamanho e outros bagulhos do mapa*/
+    width: 50%;
+}
+
+.carregar{
+    /*Área responsável pelo texto que aparece enquando o site pesquisa a api, assim que os dados aparecem esse texto some*/
+    color: deeppink;
+}
+
+/* ===EXPLICAÇÃO DE QUEM POSSUI QUEM===
+
+.Conteudo
+contem: .tituloGeral, #Principal e .carregar
+
+#Principal
+contem: as divs de cada .local
+
+.local
+contem: .nome, .descricao, .cidade, .localImagens e .mapa
+
+.localImagens
+contem: imagemUnica (duas pra cada local)
+
+*/

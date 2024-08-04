@@ -23,8 +23,7 @@ async function pegarPosts() {
         const cidade = document.createElement("p")
         const imagemUm = document.createElement("img")
         const imagemDois = document.createElement("img")
-        const imagemTres = document.createElement("img")
-        const imagemQuatro = document.createElement("img")
+        const imagens = document.createElement("div")
 
         nome.innerText = local.nome;
         descricao.innerText = local.descricao;
@@ -36,30 +35,33 @@ async function pegarPosts() {
             if (local.imagens.length > 1) {
                 imagemDois.src = local.imagens[1];
             }
-            if (local.imagens.length > 2) {
-                imagemTres.src = local.imagens[2];
-            }
-            if (local.imagens.length > 3) {
-                imagemQuatro.src = local.imagens[3];
-            }
         }
 
         // Adicionando mapas
         const divMapa = document.createElement("div");
-        divMapa.setAttribute("id", "map" + local._id); // Usar um ID único para cada mapa
+        divMapa.setAttribute("id", "map" + local._id);
         divMapa.style.height = "180px";
 
 
         div.appendChild(nome);
         div.appendChild(descricao);
         div.appendChild(cidade);
-        div.appendChild(imagemUm);
-        div.appendChild(imagemDois);
-        div.appendChild(imagemTres);
-        div.appendChild(imagemQuatro);
+        imagens.appendChild(imagemUm);
+        imagens.appendChild(imagemDois);
+        div.appendChild(imagens);
         div.appendChild(divMapa);
 
         principal.appendChild(div);
+        
+        //Organizando pro css
+        div.classList.add("local")
+        nome.classList.add("nome")
+        descricao.classList.add("descricao")
+        cidade.classList.add("cidade")
+        imagemUm.classList.add("imagemUnica")
+        imagemDois.classList.add("imagemUnica")
+        imagens.classList.add("localImagens")
+        divMapa.classList.add("mapa")
 
         // Inicializar o mapa após adicionar o divMapa ao DOM
         var map = L.map('map' + local._id).setView([local.latitude, local.longitude], 13);
