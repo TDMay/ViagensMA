@@ -1,6 +1,5 @@
 const url = "https://api-desafio5-tdmay.vercel.app/atracao"
 
-const elementoCarregar = document.querySelector("#carregar")
 const principal = document.querySelector("#principal")
 
 // Pegar os posts
@@ -12,8 +11,6 @@ async function pegarPosts() {
     const data = await response.json();
 
     console.log(data);
-
-    elementoCarregar.classList.add("esconder");
 
     data.forEach((local) => {
 
