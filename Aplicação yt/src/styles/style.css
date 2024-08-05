@@ -10,6 +10,12 @@
     --white: #fff
 }
 
+
+body{
+    background: #d9e8ff;
+}
+
+
 .banner{
     width: 100%;
     height: 100vh;
@@ -17,38 +23,9 @@
     background-position: center;
     background-size: center;
 }
-
-.logo{
-    width: 160px;
-    cursor: pointer;
-}
    
 .navbar a:hover{
     color: var(--azul);
-}
-
-.content{
-    width: 100%;
-    position: absolute;
-    color: var(--white);
-    top: 45%;
-    transform: translateY(-50%);
-    text-align: center;
-
-}
-
-.content h1{
-    margin-top: 80px;
-    font-size: 120px;
-    font-weight: 800;
-    margin-right: 15px;
-    color: var(--white);
-    font-family: "Lilita One", sans-serif;
-    font-size: 50px;
-    font-weight: 200px; ;
-    font-style: oblique;
-    background-clip: text; 
-      
 }
 
 .icone_button button {
@@ -85,10 +62,6 @@
     z-index: -1;
 }
 
-.esconder{
-    display: none;
-}
-
 
 
 /* estilização destinos */
@@ -103,7 +76,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #d9e8ff;
+    background: #00193d;
 }
 
 form{
@@ -121,116 +94,157 @@ form input#pesquisa {
     border: none;
     outline: none;
     background: #d9e8ff;
-    width: 300px;
+    width: 200px;
+}
+input{
+    background: #d9e8ff;
+    border: none;
+    outline: none;
+    opacity: 0.7;
 }
 
 form button{
     padding: 5px 10px;
     border: none;
     border-radius: 10px;
-    background: #647ea9;
+    background: #275aad;
     color: var(--white);
 }
 
+h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    margin: 10px;
+    font-weight: bold;
+    background: linear-gradient(to right, #0300a9, #230068);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
 
-.lista{
-    margin-top: 10px;
+p{  
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--azul);
+    font-weight: 600;
+    padding: 20px;
+}
+img{
+    width: 500px;
+    height: 220px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+img:hover{
+    transform: scale(1.2);
+}
+.localImagens{
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px;
     display: flex;
-    margin-top: 10px;
-    padding: 10px;
-    border-radius:5px ;
-    margin: 5px;
+    padding: 80px;
 }
 
-.item{
-    text-align: center;
-    padding: 10px;
-    width: 300px;
-    border: 2px solid #00245D;
-    margin: 8px;
 
+div.map66afbc7cccd6979c61fdf8f6{
+    margin: 40px;
+    width: 640px;
+    height: 400px;
+    cursor: pointer;
+    align-items: center;
+    margin: 200px;
+    justify-content: center;
 }
 
-.item img {
-    width: 100%;
+
+
+@media (max-width: 400px) {
+
+    
+img{
+    width: 350px;
+    height: 200px;
+    cursor: pointer;
+    transition: 0.5s;
 }
 
-/*===CSS da CONEXAO===*/
-
-.conteudo{
-    /*Conteúdo é o body, onde está tudo*/
-    background-color: blue;
-}
-
-.tituloGeral{
-    /*É o local onde está escrito "Informações". está dentro de .conteudo*/
-    color: purple;
-}
-
-#principal{
-    /* Principal é a div onde estão todos os locais (principal está dentro de .conteúdo). O flex daqui separa cada local*/
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-}
-
-.local{
-    /*Div que trata de cada local individualmente*/
-    background-color: red;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.nome{
-    /*Área H2 que trata de cada nome (os títulos do local) */
-    color: yellow;
-}
-
-.descricao{
-    /*Área p que trata de cada descrição*/
-    color: green;
-}
-
-.cidade{
-    /*Área p que trata da cidade de cada local*/
-    color: pink;
+img:hover{
+    transform: scale(1.2);
 }
 
 .localImagens{
-    /*Div onde estão contidas as imagens (duas pra cada local)*/
+
+    flex-direction: column;
     display: flex;
-    gap: 20px;
-}
-
-.imagemUnica{
-    /*img de cada imagem contida em .imagens*/
-    width: 50%;
+    align-items: center;
+    gap: 30px;
 
 }
 
-.mapa{
-    /*para alterar o tamanho e outros bagulhos do mapa*/
-    width: 50%;
+div.nav{
+    width: 500px;
 }
 
-.carregar{
-    /*Área responsável pelo texto que aparece enquando o site pesquisa a api, assim que os dados aparecem esse texto some*/
-    color: deeppink;
+
+form input#pesquisa {
+    padding: 5px;
+    border: none;
+    outline: none;
+    background: #d9e8ff;
+    width: 180px;
+    margin-right: 200px;
+}
+form{
+    width: 200px;
+    margin-right: 20px;
+}
 }
 
-/* ===EXPLICAÇÃO DE QUEM POSSUI QUEM===
 
-.Conteudo
-contem: .tituloGeral, #Principal e .carregar
+@media (max-width: 600px) {
 
-#Principal
-contem: as divs de cada .local
 
-.local
-contem: .nome, .descricao, .cidade, .localImagens e .mapa
+    img{
+        width: 350px;
+        height: 200px;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    
+    img:hover{
+        transform: scale(1.2);
+    }
+    
+    .localImagens{
+    
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    
+    }
+    
+    div.nav{
+        width: 500px;
+    }
+    
+    
+    form input#pesquisa {
+        padding: 5px;
+        border: none;
+        outline: none;
+        background: #d9e8ff;
+        width: 70px;
+        margin-right: 320px;
+        
+        
+    }
+    form{
+        width: 100px;
+        margin-right: 700px;
+        height: 20px;
+    }
 
-.localImagens
-contem: imagemUnica (duas pra cada local)
-
-*/
+}
