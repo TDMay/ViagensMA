@@ -1,0 +1,26 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "test": "",
+    "build": "tsc",
+    "vercel-build": "echo hello",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "": "file:",
+    "3266-express-mongo": "file:",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.1",
+    "mongodb": "^5.7.0",
+    "mongoose": "^7.3.4",
+    "nodemon": "^3.0.1"
+  }
+}
